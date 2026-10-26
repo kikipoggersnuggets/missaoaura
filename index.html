@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missão Aura</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+  
+    <header class="cabecalho">
+        <p class="codigo">Projeto Aura // ANO 2089</p>
+        <h1>Missão Aura</h1>
+        <p>Descubra seu perfil para explorar um novo planeta!</p>
+    </header>
+
+    <main class="container">
+        <section id="formulario-section" class="painel">
+            <h2>Identificação do participante</h2>
+            <p>Responda às perguntas e descubra seu papel na missão.</p>
+
+            <form id="formulario">
+                <div class="campo">
+                    <label for="nome">Nome completo:</label>
+                    <input type="text" id="nome"
+                           placeholder="Digite seu nome" required>
+                </div>
+
+                <div class="campo">
+                    <label for="nascimento">Data de nascimento:</label>
+                    <input type="date" id="nascimento" required>
+                </div>
+
+                <fieldset>
+                    <legend>1. Qual atividade você prefere?</legend>
+                    <label class="opcao">
+                        <input type="radio" name="p1" value="1" required>
+                        Construir equipamentos e resolver problemas.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="p1" value="2">
+                        Pesquisar e analisar descobertas.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="p1" value="3">
+                        Explorar lugares desconhecidos.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="p1" value="4">
+                        Organizar a equipe e planejar.
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>2. Você encontrou um objeto alienígena! O que faz?</legend>
+                    <label class="opcao">
+                        <input type="radio" name="p2" value="1" required>
+                        Tento descobrir como ele funciona.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="p2" value="2">
+                        Analiso sua composição e suas propriedades.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="p2" value="3">
+                        Investigo o local onde ele foi encontrado.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="p2" value="4">
+                        Organizo uma análise segura com a equipe.
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>3. Qual é sua maior qualidade?</legend>
+                    <label class="opcao">
+                        <input type="radio" name="p3" value="1" required>
+                        Criatividade para encontrar soluções.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="p3" value="2">
+                        Curiosidade e raciocínio lógico.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="p3" value="3">
+                        Coragem e capacidade de adaptação.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="p3" value="4">
+                        Liderança e organização.
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>4. Como você prefere trabalhar?</legend>
+                    <label class="opcao">
+                        <input type="radio" name="p4" value="1" required>
+                        Criando e consertando coisas.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="p4" value="2">
+                        Fazendo experiências e pesquisas.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="p4" value="3">
+                        Vivendo aventuras e descobrindo novidades.
+                    </label>
+                    <label class="opcao">
+                        <input type="radio" name="p4" value="4">
+                        Coordenando tarefas e tomando decisões.
+                    </label>
+                </fieldset>
+
+                <button type="submit" class="botao">
+                    DESCOBRIR MEU PERFIL
+                </button>
+            </form>
+        </section>
+
+        <section id="resultado" class="painel resultado" hidden
+                 aria-live="polite">
+            <p class="codigo">RELATÓRIO DE EXPLORAÇÃO</p>
+            <h2 id="saudacao"></h2>
+            <p id="idade"></p>
+
+            <img id="imagem-perfil" src="img/aliendogui.jpg" alt="pets-espaciais">
+
+            <p class="etiqueta">SEU PERFIL</p>
+            <h2 id="nome-perfil"></h2>
+            <p id="categoria-perfil" class="categoria"></p>
+            <p id="descricao-perfil"></p>
+
+            <h3>Recomendação para a missão</h3>
+            <p id="recomendacao"></p>
+
+            <p id="mensagem-empate" class="mensagem"></p>
+
+            <button type="button" id="refazer" class="botao secundario">
+                -refaça-
+            </button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Missão Aura • Exploração Interplanetária • 2089</p>
+        <p>aura67</p>
+    </footer>
+</body>
+</html>

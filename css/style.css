@@ -1,0 +1,268 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+     --fundo: #2b1028;
+    --painel: #421b3a;
+    --roxo: #ff8fcf;
+    --azul: #ffb6d9;
+    --texto: #fff4fa;
+    --texto-suave: #e8c6dc;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(ellipse at top, #922d8e 0%, transparent 60%),
+        var(--fundo);
+    color: var(--texto);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.cabecalho {
+    text-align: center;
+    padding: 45px 20px 30px;
+}
+
+.codigo {
+    color: var(--azul);
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    color: var(--roxo);
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    letter-spacing: 5px;
+    text-shadow: 0 0 25px #ff80d966;
+}
+
+.cabecalho > p:last-child {
+    color: var(--texto-suave);
+    margin-top: 10px;
+}
+
+.container {
+    width: min(800px, 92%);
+    margin: 0 auto 40px;
+}
+
+.painel {
+    background: var(--painel);
+    border: 1px solid #49517b;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 10px 40px #00000030;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.painel > p {
+    color: var(--texto-suave);
+}
+
+.campo {
+    margin: 22px 0;
+}
+
+.campo label,
+.campo input {
+    display: block;
+    width: 100%;
+}
+
+.campo label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"] {
+    background: #080539;
+    border: 1px solid #555e88;
+    border-radius: 8px;
+    padding: 13px;
+    color: var(--texto);
+    font: inherit;
+    min-height: 48px;
+}
+
+input:focus-visible,
+button:focus-visible,
+.opcao:focus-within {
+    outline: 2px solid var(--azul);
+    outline-offset: 3px;
+}
+
+fieldset {
+    border: 1px solid #444e78;
+    border-radius: 12px;
+    padding: 18px;
+    margin: 25px 0;
+    min-width: 0;
+}
+
+legend {
+    color: var(--azul);
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+.opcao {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 11px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--texto-suave);
+}
+
+.opcao:hover {
+    background: #252d50;
+    color: var(--texto);
+}
+
+.opcao input {
+    margin-top: 6px;
+    accent-color: var(--roxo);
+    flex-shrink: 0;
+}
+
+.botao {
+    display: block;
+    width: 100%;
+    background: linear-gradient(100deg, #8260ee, #427eea);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.botao:hover {
+    filter: brightness(1.15);
+    transform: translateY(-2px);
+}
+
+.resultado {
+    text-align: center;
+}
+
+.resultado[hidden] {
+    display: none;
+}
+
+.resultado img {
+    display: block;
+    width: min(100%, 380px);
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    margin: 25px auto;
+    border: 2px solid var(--roxo);
+    border-radius: 15px;
+    background: #0b1128;
+}
+
+.etiqueta {
+    color: var(--azul) !important;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+}
+
+.categoria {
+    display: inline-block;
+    color: var(--azul) !important;
+    border: 1px solid var(--azul);
+    border-radius: 20px;
+    padding: 5px 14px;
+    margin: 8px 0 18px;
+}
+
+.resultado h3 {
+    margin-top: 25px;
+    color: var(--roxo);
+}
+
+.mensagem {
+    margin: 18px 0;
+    font-style: italic;
+}
+
+.secundario {
+    margin-top: 25px;
+    background: transparent;
+    border: 1px solid var(--roxo);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--texto-suave);
+    font-size: 0.85rem;
+}
+
+footer p + p {
+    color: var(--azul);
+    letter-spacing: 3px;
+    margin-top: 8px;
+}
+
+@media (max-width: 500px) {
+    .cabecalho {
+        padding: 30px 15px 22px;
+    }
+
+    h1 {
+        letter-spacing: 2px;
+    }
+
+    .container {
+        width: 94%;
+    }
+
+    .painel {
+        padding: 18px 14px;
+        border-radius: 12px;
+    }
+
+    fieldset {
+        padding: 13px 10px;
+        margin: 20px 0;
+    }
+
+    legend {
+        font-size: 0.95rem;
+    }
+
+    .opcao {
+        padding: 10px 5px;
+        font-size: 0.93rem;
+    }
+
+    input[type="text"],
+    input[type="date"] {
+        font-size: 16px;
+    }
+
+    .botao {
+        padding: 14px 10px;
+        font-size: 0.9rem;
+    }
+
+    .resultado img {
+        width: 100%;
+    }
+}
